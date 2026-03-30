@@ -1,7 +1,7 @@
 name: Deploy ShinyDex
 on:
   push:
-    branches: ["main"] # Ou "master" selon ton cas
+    branches: ["main"]
 permissions:
   contents: read
   pages: write
@@ -15,11 +15,23 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm install
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+          # On précise où se trouve le cache npm
+          cache-dependency-path: 'ShinyDex-Site/package-lock.json'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ShinyDex-Site # <--- ICI
+
+      - name: Build project
+        run: npm run build
+        working-directory: ShinyDex-Site # <--- ICI
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          # On pointe vers le dossier dist à l'intérieur du sous-dossier
+          path: 'ShinyDex-Site/dist'
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
