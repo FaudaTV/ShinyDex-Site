@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-  base: '/ShinyDex-Site/',
+  base: '/ShinyDex-Site/ShinyDex-Site/',
   css: {
     preprocessorOptions: {
       scss: {
