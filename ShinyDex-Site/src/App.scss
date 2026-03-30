@@ -48,7 +48,7 @@
   
   &.plante { background: #78C850; }
   &.feu { background: #f03030; }
-  &.eau { background: #6890F0; }
+  &.eau { background: #0c55ff; }
   &.insecte { background: #A8B820; }
   &.normal { background: #929292; }
   &.poison { background: #A040A0; }
@@ -58,9 +58,10 @@
   &.combat { background: #ff9100; }
   &.roche { background: #B8A038; }
   &.sol { background: #584100; }
-  &.glace { background: #98D8D8; color: #000 !important; }
+  &.glace { background: #51f8f8; color: #000 !important; }
   &.spectre { background: #705898; }
   &.dragon { background: #4234fa; }
   &.ténèbres { background: #1a1a1a; }
   &.acier { background: #78b7db; }
+  &.fée { background: #fdb9e9; color: #000 !important; }
 }
