@@ -1,4 +1,8 @@
 export default function PokemonCard({ pokemon, isCaptured, onToggle }) {
+  
+  const cleanPath = pokemon.img.startsWith('/') ? pokemon.img.slice(1) : pokemon.img;
+  const fullImagePath = `${import.meta.env.BASE_URL}${cleanPath}`;
+
   return (
     <div className="col">
       <div 
@@ -28,7 +32,7 @@ export default function PokemonCard({ pokemon, isCaptured, onToggle }) {
         {/* Sprite avec effet grayscale */}
         <div className="text-center py-2">
           <img 
-            src={pokemon.img} 
+            src={fullImagePath} 
             alt={pokemon.name} 
             className="img-fluid"
             style={{ 
