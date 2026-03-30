@@ -1,0 +1,57 @@
+// src/App.scss
+@import "bootstrap/scss/bootstrap";
+
+.card-pokemon {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #dee2e6 !important; // Bordure grise par défaut
+  border-radius: 15px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+
+  // Quand le pokemon est capturé (Doré)
+  &.is-captured {
+    border-color: #ffca28 !important; 
+    background-color: #fff !important;
+    box-shadow: 0 0 15px rgba(255, 202, 40, 0.2);
+    
+    &:hover {
+      box-shadow: 0 0 20px rgba(255, 202, 40, 0.4) !important;
+    }
+  }
+
+  // Quand il n'est pas capturé (Gris propre)
+  &.not-captured {
+    border-color: #e9ecef !important;
+    background-color: #f8f9fa !important;
+    
+    &:hover {
+      border-color: #adb5bd !important; // Gris plus foncé au survol
+    }
+  }
+}
+
+// Couleurs des badges de types (plus fun)
+.badge-type {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  border: none !important;
+  color: white !important;
+  
+  &.plante { background: #78C850; }
+  &.feu { background: #F08030; }
+  &.eau { background: #6890F0; }
+  &.insecte { background: #A8B820; }
+  &.normal { background: #A8A878; }
+  &.poison { background: #A040A0; }
+  &.electrik { background: #F8D030; color: #000 !important; }
+  &.vol { background: #7fc1ec; }
+}
