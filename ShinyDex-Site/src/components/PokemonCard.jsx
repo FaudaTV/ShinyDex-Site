@@ -1,7 +1,17 @@
 export default function PokemonCard({ pokemon, isCaptured, onToggle }) {
   
-  const cleanPath = pokemon.img.startsWith('/') ? pokemon.img.slice(1) : pokemon.img;
-  const fullImagePath = `${import.meta.env.BASE_URL}${cleanPath}`;
+  // On définit manuellement le préfixe pour GitHub Pages
+  const repoName = 'ShinyDex-Site';
+  // On vérifie si on est en production (sur GitHub) ou en local
+  const isProduction = import.meta.env.PROD;
+
+  // On construit le chemin : si prod, on ajoute le nom du repo, sinon rien
+  const base = isProduction ? `/${repoName}/` : '/';
+
+  // On nettoie le chemin du JSON (enlève le premier slash s'il existe)
+  const cleanImgPath = pokemon.img.startsWith('/') ? pokemon.img.slice(1) : pokemon.img;
+
+  const finalSrc = `${base}${cleanImgPath}`;
 
   return (
     <div className="col">
@@ -32,7 +42,7 @@ export default function PokemonCard({ pokemon, isCaptured, onToggle }) {
         {/* Sprite avec effet grayscale */}
         <div className="text-center py-2">
           <img 
-            src={fullImagePath} 
+            src={finalSrc} 
             alt={pokemon.name} 
             className="img-fluid"
             style={{ 
