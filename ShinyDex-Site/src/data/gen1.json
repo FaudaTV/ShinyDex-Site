@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbizarre",
+    "types": ["Plante", "Poison"],
+    "img": "/sprites/shiny/0001.gif"
+  },
+  {
+    "id": 2,
+    "name": "Herbizarre",
+    "types": ["Plante", "Poison"],
+    "img": "/sprites/shiny/0002.gif"
+  },
+  {
+    "id": 3,
+    "name": "Florizarre",
+    "types": ["Plante", "Poison"],
+    "img": "/sprites/shiny/0003.gif"
+  },
+  {
+    "id": 4,
+    "name": "Salamèche",
+    "types": ["Feu"],
+    "img": "/sprites/shiny/0004.gif"
+  },
+  {
+    "id": 5,
+    "name": "Réptincel",
+    "types": ["Feu"],
+    "img": "/sprites/shiny/0005.gif"
+  },
+  {
+    "id": 6,
+    "name": "Dracaufeu",
+    "types": ["Feu", "Vol"],
+    "img": "/sprites/shiny/0006.gif"
+  }
+]
