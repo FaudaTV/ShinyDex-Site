@@ -6,8 +6,10 @@ import Navbar from './components/Navbar';
 import gensMetadata from './data/all.json';
 import gen1 from './data/gen1.json';
 import gen2 from './data/gen2.json';
+import gen3 from './data/gen3.json';
+import gen4 from './data/gen4.json';
 
-const allPokemonData = [...gen1, ...gen2];
+const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4];
 
 function App() {
   // --- ÉTATS ---
