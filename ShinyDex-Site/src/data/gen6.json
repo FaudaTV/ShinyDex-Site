@@ -1,0 +1,434 @@
+[
+    {
+        "id": 650,
+        "name": "Marisson",
+        "types": ["Plante"],
+        "img": "/sprites/shiny/0650.gif"
+    },
+    {
+        "id": 651,
+        "name": "Boguérisse",
+        "types": ["Plante"],
+        "img": "/sprites/shiny/0651.gif"
+    },
+    {
+        "id": 652,
+        "name": "Blindépique",
+        "types": ["Plante", "Combat"],
+        "img": "/sprites/shiny/0652.gif"
+    },
+    {
+        "id": 653,
+        "name": "Feunnec",
+        "types": ["Feu"],
+        "img": "/sprites/shiny/0653.gif"
+    },
+    {
+        "id": 654,
+        "name": "Roussil",
+        "types": ["Feu"],
+        "img": "/sprites/shiny/0654.gif"
+    },
+    {
+        "id": 655,
+        "name": "Goupelin",
+        "types": ["Feu", "Psy"],
+        "img": "/sprites/shiny/0655.gif"
+    },
+    {
+        "id": 656,
+        "name": "Grenousse",
+        "types": ["Eau"],
+        "img": "/sprites/shiny/0656.gif"
+    },
+    {
+        "id": 657,
+        "name": "Croâporal",
+        "types": ["Eau"],
+        "img": "/sprites/shiny/0657.gif"
+    },
+    {
+        "id": 658,
+        "name": "Amphinobi",
+        "types": ["Eau", "Ténèbres"],
+        "img": "/sprites/shiny/0658.gif"
+    },
+    {
+        "id": 659,
+        "name": "Sapereau",
+        "types": ["Normal"],
+        "img": "/sprites/shiny/0659.gif"
+    },
+    {
+        "id": 660,
+        "name": "Excavarenne",
+        "types": ["Normal", "Sol"],
+        "img": "/sprites/shiny/0660.gif"
+    },
+    {
+        "id": 661,
+        "name": "Passerouge",
+        "types": ["Normal", "Vol"],
+        "img": "/sprites/shiny/0661.gif"
+    },
+    {
+        "id": 662,
+        "name": "Braisillon",
+        "types": ["Feu", "Vol"],
+        "img": "/sprites/shiny/0662.gif"
+    },
+    {
+        "id": 663,
+        "name": "Flambusard",
+        "types": ["Feu", "Vol"],
+        "img": "/sprites/shiny/0663.gif"
+    },
+    {
+        "id": 664,
+        "name": "Lépidonille",
+        "types": ["Insecte"],
+        "img": "/sprites/shiny/0664.gif"
+    },
+    {
+        "id": 665,
+        "name": "Pérégrain",
+        "types": ["Insecte"],
+        "img": "/sprites/shiny/0665.gif"
+    },
+    {
+        "id": 666,
+        "name": "Prismillon",
+        "types": ["Insecte", "Vol"],
+        "img": "/sprites/shiny/0666.gif"
+    },
+    {
+        "id": 667,
+        "name": "Hélionceau",
+        "types": ["Feu", "Normal"],
+        "img": "/sprites/shiny/0667.gif"
+    },
+    {
+        "id": 668,
+        "name": "Némélios",
+        "types": ["Feu", "Normal"],
+        "img": "/sprites/shiny/0668.gif"
+    },
+    {
+        "id": 669,
+        "name": "Flabébé",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0669.gif"
+    },
+    {
+        "id": 670,
+        "name": "Floette",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0670.gif"
+    },
+    {
+        "id": 671,
+        "name": "Florges",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0671.gif"
+    },
+    {
+        "id": 672,
+        "name": "Cabriolaine",
+        "types": ["Plante"],
+        "img": "/sprites/shiny/0672.gif"
+    },
+    {
+        "id": 673,
+        "name": "Chevroum",
+        "types": ["Plante"],
+        "img": "/sprites/shiny/0673.gif"
+    },
+    {
+        "id": 674,
+        "name": "Pandespiègle",
+        "types": ["Combat"],
+        "img": "/sprites/shiny/0674.gif"
+    },
+    {
+        "id": 675,
+        "name": "Pandarbare",
+        "types": ["Combat", "Ténèbres"],
+        "img": "/sprites/shiny/0675.gif"
+    },
+    {
+        "id": 676,
+        "name": "Couafarel",
+        "types": ["Normal"],
+        "img": "/sprites/shiny/0676.gif"
+    },
+    {
+        "id": 677,
+        "name": "Psystigri",
+        "types": ["Psy"],
+        "img": "/sprites/shiny/0677.gif"
+    },
+    {
+        "id": 678,
+        "name": "Mistigrix",
+        "types": ["Psy"],
+        "img": "/sprites/shiny/0678.gif"
+    },
+    {
+        "id": 679,
+        "name": "Monorpale",
+        "types": ["Acier", "Spectre"],
+        "img": "/sprites/shiny/0679.gif"
+    },
+    {
+        "id": 680,
+        "name": "Dimoclès",
+        "types": ["Acier", "Spectre"],
+        "img": "/sprites/shiny/0680.gif"
+    },
+    {
+        "id": 681,
+        "name": "Exagide",
+        "types": ["Acier", "Spectre"],
+        "img": "/sprites/shiny/0681.gif"
+    },
+    {
+        "id": 682,
+        "name": "Fluvetin",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0682.gif"
+    },
+    {
+        "id": 683,
+        "name": "Cocotine",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0683.gif"
+    },
+    {
+        "id": 684,
+        "name": "Sucroquin",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0684.gif"
+    },
+    {
+        "id": 685,
+        "name": "Cupcanaille",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0685.gif"
+    },
+    {
+        "id": 686,
+        "name": "Sepiatop",
+        "types": ["Ténèbres", "Psy"],
+        "img": "/sprites/shiny/0686.gif"
+    },
+    {
+        "id": 687,
+        "name": "Sepiatroce",
+        "types": ["Ténèbres", "Psy"],
+        "img": "/sprites/shiny/0687.gif"
+    },
+    {
+        "id": 688,
+        "name": "Opermine",
+        "types": ["Roche", "Eau"],
+        "img": "/sprites/shiny/0688.gif"
+    },
+    {
+        "id": 689,
+        "name": "Golgopathe",
+        "types": ["Roche", "Eau"],
+        "img": "/sprites/shiny/0689.gif"
+    },
+    {
+        "id": 690,
+        "name": "Venalgue",
+        "types": ["Poison", "Eau"],
+        "img": "/sprites/shiny/0690.gif"
+    },
+    {
+        "id": 691,
+        "name": "Kravarech",
+        "types": ["Poison", "Dragon"],
+        "img": "/sprites/shiny/0691.gif"
+    },
+    {
+        "id": 692,
+        "name": "Flingouste",
+        "types": ["Eau"],
+        "img": "/sprites/shiny/0692.gif"
+    },
+    {
+        "id": 693,
+        "name": "Gamblast",
+        "types": ["Eau"],
+        "img": "/sprites/shiny/0693.gif"
+    },
+    {
+        "id": 694,
+        "name": "Galvaran",
+        "types": ["Électrik", "Normal"],
+        "img": "/sprites/shiny/0694.gif"
+    },
+    {
+        "id": 695,
+        "name": "Iguolta",
+        "types": ["Électrik", "Normal"],
+        "img": "/sprites/shiny/0695.gif"
+    },
+    {
+        "id": 696,
+        "name": "Ptyranidur",
+        "types": ["Roche", "Dragon"],
+        "img": "/sprites/shiny/0696.gif"
+    },
+    {
+        "id": 697,
+        "name": "Rexillius",
+        "types": ["Roche", "Dragon"],
+        "img": "/sprites/shiny/0697.gif"
+    },
+    {
+        "id": 698,
+        "name": "Amagara",
+        "types": ["Roche", "Glace"],
+        "img": "/sprites/shiny/0698.gif"
+    },
+    {
+        "id": 699,
+        "name": "Dragmara",
+        "types": ["Roche", "Glace"],
+        "img": "/sprites/shiny/0699.gif"
+    },
+    {
+        "id": 700,
+        "name": "Nymphali",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0700.gif"
+    },
+    {
+        "id": 701,
+        "name": "Brutalibré",
+        "types": ["Combat", "Vol"],
+        "img": "/sprites/shiny/0701.gif"
+    },
+    {
+        "id": 702,
+        "name": "Dedenne",
+        "types": ["Électrik", "Fée"],
+        "img": "/sprites/shiny/0702.gif"
+    },
+    {
+        "id": 703,
+        "name": "Strassie",
+        "types": ["Roche", "Fée"],
+        "img": "/sprites/shiny/0703.gif"
+    },
+    {
+        "id": 704,
+        "name": "Mucuscule",
+        "types": ["Dragon"],
+        "img": "/sprites/shiny/0704.gif"
+    },
+    {
+        "id": 705,
+        "name": "Colimucus",
+        "types": ["Dragon"],
+        "img": "/sprites/shiny/0705.gif"
+    },
+    {
+        "id": 706,
+        "name": "Muplodocus",
+        "types": ["Dragon"],
+        "img": "/sprites/shiny/0706.gif"
+    },
+    {
+        "id": 707,
+        "name": "Trousselin",
+        "types": ["Acier", "Fée"],
+        "img": "/sprites/shiny/0707.gif"
+    },
+    {
+        "id": 708,
+        "name": "Brocélôme",
+        "types": ["Spectre", "Plante"],
+        "img": "/sprites/shiny/0708.gif"
+    },
+    {
+        "id": 709,
+        "name": "Desséliande",
+        "types": ["Spectre", "Plante"],
+        "img": "/sprites/shiny/0709.gif"
+    },
+    {
+        "id": 710,
+        "name": "Pitrouille",
+        "types": ["Spectre", "Plante"],
+        "img": "/sprites/shiny/0710.gif"
+    },
+    {
+        "id": 711,
+        "name": "Banshitrouye",
+        "types": ["Spectre", "Plante"],
+        "img": "/sprites/shiny/0711.gif"
+    },
+    {
+        "id": 712,
+        "name": "Grelaçon",
+        "types": ["Glace"],
+        "img": "/sprites/shiny/0712.gif"
+    },
+    {
+        "id": 713,
+        "name": "Séracrawl",
+        "types": ["Glace"],
+        "img": "/sprites/shiny/0713.gif"
+    },
+    {
+        "id": 714,
+        "name": "Sonistrelle",
+        "types": ["Vol", "Dragon"],
+        "img": "/sprites/shiny/0714.gif"
+    },
+    {
+        "id": 715,
+        "name": "Bruyverne",
+        "types": ["Vol", "Dragon"],
+        "img": "/sprites/shiny/0715.gif"
+    },
+    {
+        "id": 716,
+        "name": "Xerneas",
+        "types": ["Fée"],
+        "img": "/sprites/shiny/0716.gif"
+    },
+    {
+        "id": 717,
+        "name": "Yveltal",
+        "types": ["Ténèbres", "Vol"],
+        "img": "/sprites/shiny/0717.gif"
+    },
+    {
+        "id": 718,
+        "name": "Zygarde",
+        "types": ["Dragon", "Sol"],
+        "img": "/sprites/shiny/0718.gif"
+    },
+    {
+        "id": 719,
+        "name": "Diancie",
+        "types": ["Roche", "Fée"],
+        "img": "/sprites/shiny/0719.gif"
+    },
+    {
+        "id": 720,
+        "name": "Hoopa",
+        "types": ["Psy", "Spectre"],
+        "img": "/sprites/shiny/0720.gif"
+    },
+    {
+        "id": 721,
+        "name": "Volcanion",
+        "types": ["Feu", "Eau"],
+        "img": "/sprites/shiny/0721.gif"
+    }
+]
