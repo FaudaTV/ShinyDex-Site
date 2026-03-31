@@ -13,8 +13,9 @@ import gen6 from './data/gen6.json';
 import gen7 from './data/gen7.json';
 import gen8 from './data/gen8.json';
 import gen9 from './data/gen9.json';
+import formsData from './data/formes.json';
 
-const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9];
+const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9, ...formsData];
 
 function App() {
   // --- ÉTATS ---
@@ -77,37 +78,73 @@ function App() {
 
   // --- FILTRAGE ---
   const filteredPokemons = allPokemonData.filter(p => {
-    const pId = Number(p.id);
-    const meta = gensMetadata.find(m => pId >= Number(m.startId) && pId <= Number(m.endId));
+    const pIdStr = String(p.id);
+    const isForm = pIdStr.includes("-");
     
+    // 1. Déterminer la "Meta" (Génération)
+    let meta;
+    if (isForm) {
+      // Si c'est une forme, on la lie d'office à la Gen 10 (Formes)
+      meta = gensMetadata.find(m => m.gen === 10);
+    } else {
+      // Sinon, on cherche la génération par ID numérique (Gen 1 à 9)
+      const baseId = parseInt(pIdStr);
+      meta = gensMetadata.find(m => baseId >= m.startId && baseId <= m.endId && m.gen !== 10);
+    }
+
     if (!meta) return false;
 
+    // 2. Filtre de sélection des générations
     const isGenSelected = selectedGens.includes(Number(meta.gen));
 
+    // 3. Recherche (Nom, ID ou Type)
     const matchesSearch = 
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-      pId.toString().includes(searchTerm) ||
+      pIdStr.includes(searchTerm) ||
       (p.types && p.types.some(t => t.toLowerCase().includes(searchTerm.toLowerCase())));
 
-    const isCaptured = capturedIds.includes(pId);
+    // 4. Filtre de statut (Capturé / Manquant)
+    const isCaptured = capturedIds.includes(p.id);
     let matchesStatus = true;
     if (statusFilter === "captured") matchesStatus = isCaptured;
     if (statusFilter === "missing") matchesStatus = !isCaptured;
 
     return isGenSelected && matchesSearch && matchesStatus;
+  })
+  .sort((a, b) => {
+    // TRI INTELLIGENT : "0201" puis "0201-f01", "0201-f02", etc.
+    const partsA = String(a.id).split("-");
+    const partsB = String(b.id).split("-");
+    const numA = parseInt(partsA[0]);
+    const numB = parseInt(partsB[0]);
+
+    if (numA !== numB) return numA - numB;
+
+    const variantA = partsA[1] || "";
+    const variantB = partsB[1] || "";
+    return variantA.localeCompare(variantB);
   });
 
   // --- MODIF : DÉCOUPE DU TABLEAU POUR L'AFFICHAGE ---
   const displayedPokemons = filteredPokemons.slice(0, limit);
 
   // --- STATS ---
+  
+  // Total des Pokémon de base uniquement (Gen 1 à 9)
   const totalAffiche = gensMetadata
-    .filter(m => selectedGens.includes(m.gen))
+    .filter(m => selectedGens.includes(m.gen) && m.gen !== 10)
     .reduce((acc, c) => acc + c.count, 0);
 
-  const capturesAffichees = capturedIds.filter(id => 
-    gensMetadata.some(m => selectedGens.includes(m.gen) && id >= m.startId && id <= m.endId)
-  ).length;
+  // Nombre de captures parmi les Pokémon de base uniquement
+  const capturesAffichees = capturedIds.filter(id => {
+    const idStr = String(id);
+    if (idStr.includes("-")) return false; // On ne compte pas les formes dans la progression
+
+    const numId = parseInt(idStr);
+    return gensMetadata.some(m => 
+      selectedGens.includes(m.gen) && m.gen !== 10 && numId >= m.startId && numId <= m.endId
+    );
+  }).length;
 
   const progress = totalAffiche > 0 ? (capturesAffichees / totalAffiche) * 100 : 0;
 
