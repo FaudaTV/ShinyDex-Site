@@ -44,6 +44,7 @@ export default function PokemonCard({ pokemon, isCaptured, onToggle }) {
           <img 
             src={finalSrc} 
             alt={pokemon.name} 
+            loading="lazy"
             className="img-fluid"
             style={{ 
               height: '110px', 

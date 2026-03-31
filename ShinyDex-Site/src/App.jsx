@@ -22,12 +22,33 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
 
+  // --- MODIF : LIMITE POUR INFINITE SCROLL ---
+  const [limit, setLimit] = useState(40); // On commence par afficher 40 Pokémon
+
   // --- SAUVEGARDE ---
   useEffect(() => {
     localStorage.setItem('shiny-dex-captured', JSON.stringify(capturedIds));
   }, [capturedIds]);
 
-  // --- FONCTIONS LOGIQUES (Celles qui manquaient) ---
+  // --- MODIF : LOGIQUE DE SCROLL INFINI ---
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si on arrive à 300px du bas de la page, on charge les 40 suivants
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
+        setLimit(prev => prev + 40);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // --- MODIF : RESET LA LIMITE QUAND ON FILTRE ---
+  useEffect(() => {
+    setLimit(40); // On remonte en haut de liste si on cherche un Pokémon précis
+  }, [searchTerm, selectedGens, statusFilter]);
+
+  // --- FONCTIONS LOGIQUES ---
   const toggleCapture = (id) => {
     setCapturedIds(prev => 
       prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
@@ -35,7 +56,7 @@ function App() {
   };
 
   const toggleGen = (genId) => {
-    const id = Number(genId); // On force le type Number
+    const id = Number(genId);
     setSelectedGens(prev => 
       prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
     );
@@ -45,33 +66,24 @@ function App() {
     if (selectedGens.length === gensMetadata.length) {
       setSelectedGens([]);
     } else {
-      setSelectedGens(gensMetadata.map(m => Number(m.gen))); // On force le type Number
+      setSelectedGens(gensMetadata.map(m => Number(m.gen)));
     }
   };
 
   // --- FILTRAGE ---
-  const displayedPokemons = allPokemonData.filter(p => {
-    // On force la conversion en Number pour éviter les bugs de comparaison "1" vs 1
+  const filteredPokemons = allPokemonData.filter(p => {
     const pId = Number(p.id);
-
-    // 1. Trouver la génération (avec conversion forcée)
-    const meta = gensMetadata.find(m => 
-      pId >= Number(m.startId) && pId <= Number(m.endId)
-    );
+    const meta = gensMetadata.find(m => pId >= Number(m.startId) && pId <= Number(m.endId));
     
-    // Si on ne trouve pas de meta, on n'affiche pas (évite le plantage)
     if (!meta) return false;
 
-    // 2. Vérifier si la génération est sélectionnée
     const isGenSelected = selectedGens.includes(Number(meta.gen));
 
-    // 3. Recherche (Nom, ID ou Type)
     const matchesSearch = 
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
       pId.toString().includes(searchTerm) ||
       (p.types && p.types.some(t => t.toLowerCase().includes(searchTerm.toLowerCase())));
 
-    // 4. Statut (Obtenu / Manquant)
     const isCaptured = capturedIds.includes(pId);
     let matchesStatus = true;
     if (statusFilter === "captured") matchesStatus = isCaptured;
@@ -79,6 +91,9 @@ function App() {
 
     return isGenSelected && matchesSearch && matchesStatus;
   });
+
+  // --- MODIF : DÉCOUPE DU TABLEAU POUR L'AFFICHAGE ---
+  const displayedPokemons = filteredPokemons.slice(0, limit);
 
   // --- STATS ---
   const totalAffiche = gensMetadata
@@ -110,7 +125,7 @@ function App() {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="fw-bold m-0">Pokédex</h2>
           <span className="badge bg-dark px-3 py-2">
-            {displayedPokemons.length} Pokémon trouvés
+            {filteredPokemons.length} Pokémon trouvés
           </span>
         </div>
 

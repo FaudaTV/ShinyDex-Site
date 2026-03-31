@@ -4,13 +4,25 @@
 .card-pokemon {
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid #dee2e6 !important; // Bordure grise par défaut
+  border: 2px solid #dee2e6 !important; 
   border-radius: 15px;
   overflow: hidden;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  // --- EFFETS HOVER (Uniquement pour PC/Souris) ---
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+  }
+
+  // --- EFFET CLIC (Pour Mobile/Tactile) ---
+  // Optionnel : donne un petit feedback quand on touche la carte sur téléphone
+  @media (hover: none) {
+    &:active {
+      transform: scale(0.98);
+      transition: transform 0.1s;
+    }
   }
 
   // Quand le pokemon est capturé (Doré)
@@ -19,8 +31,10 @@
     background-color: #fff !important;
     box-shadow: 0 0 15px rgba(255, 202, 40, 0.2);
     
-    &:hover {
-      box-shadow: 0 0 20px rgba(255, 202, 40, 0.4) !important;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 0 20px rgba(255, 202, 40, 0.4) !important;
+      }
     }
   }
 
@@ -29,8 +43,10 @@
     border-color: #e9ecef !important;
     background-color: #f8f9fa !important;
     
-    &:hover {
-      border-color: #adb5bd !important; // Gris plus foncé au survol
+    @media (hover: hover) {
+      &:hover {
+        border-color: #adb5bd !important; 
+      }
     }
   }
 }
