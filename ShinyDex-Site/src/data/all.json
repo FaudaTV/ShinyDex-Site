@@ -6,5 +6,6 @@
   { "gen": 5, "label": "Génération 5", "count": 156, "startId": 494, "endId": 649 },
   { "gen": 6, "label": "Génération 6", "count": 72, "startId": 650, "endId": 721 },
   { "gen": 7, "label": "Génération 7", "count": 88, "startId": 722, "endId": 809 },
-  { "gen": 8, "label": "Génération 8", "count": 96, "startId": 810, "endId": 905 }
+  { "gen": 8, "label": "Génération 8", "count": 96, "startId": 810, "endId": 905 },
+  { "gen": 9, "label": "Génération 9", "count": 120, "startId": 906, "endId": 1025 }
 ]
