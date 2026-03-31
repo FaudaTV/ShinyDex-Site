@@ -2,5 +2,6 @@
   { "gen": 1, "label": "Génération 1", "count": 151, "startId": 1, "endId": 151 },
   { "gen": 2, "label": "Génération 2", "count": 100, "startId": 152, "endId": 251 },
   { "gen": 3, "label": "Génération 3", "count": 135, "startId": 252, "endId": 386 },
-  { "gen": 4, "label": "Génération 4", "count": 107, "startId": 387, "endId": 493 }
+  { "gen": 4, "label": "Génération 4", "count": 107, "startId": 387, "endId": 493 },
+  { "gen": 5, "label": "Génération 5", "count": 156, "startId": 494, "endId": 649 }
 ]
