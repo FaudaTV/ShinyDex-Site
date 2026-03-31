@@ -10,8 +10,9 @@ import gen3 from './data/gen3.json';
 import gen4 from './data/gen4.json';
 import gen5 from './data/gen5.json';
 import gen6 from './data/gen6.json';
+import gen7 from './data/gen7.json';
 
-const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6];
+const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7];
 
 function App() {
   // --- ÉTATS ---
