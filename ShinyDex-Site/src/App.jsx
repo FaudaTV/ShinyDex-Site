@@ -80,48 +80,67 @@ function App() {
   const filteredPokemons = allPokemonData.filter(p => {
     const pIdStr = String(p.id);
     const isForm = pIdStr.includes("-");
-    
-    // 1. Déterminer la "Meta" (Génération)
-    let meta;
+    const baseId = parseInt(pIdStr.split("-")[0]);
+
+    // 1. Trouver la génération parente (Gen 1 à 9)
+    const metaBase = gensMetadata.find(m => 
+      baseId >= m.startId && 
+      baseId <= m.endId && 
+      m.gen !== 10
+    );
+
+    if (!metaBase) return false;
+
+    // 2. LOGIQUE DE SÉLECTION
+    const isParentGenSelected = selectedGens.includes(Number(metaBase.gen));
+    const isFormsEnabled = selectedGens.includes(10);
+    const onlyFormsSelected = selectedGens.length === 1 && isFormsEnabled;
+
     if (isForm) {
-      // Si c'est une forme, on la lie d'office à la Gen 10 (Formes)
-      meta = gensMetadata.find(m => m.gen === 10);
+      // On affiche la forme si :
+      // (Sa Gen parente est cochée ET la case Formes est cochée) 
+      // OU (Seule la case Formes est cochée)
+      if (!isFormsEnabled || (!isParentGenSelected && !onlyFormsSelected)) {
+        return false;
+      }
     } else {
-      // Sinon, on cherche la génération par ID numérique (Gen 1 à 9)
-      const baseId = parseInt(pIdStr);
-      meta = gensMetadata.find(m => baseId >= m.startId && baseId <= m.endId && m.gen !== 10);
+      // Pokémon de base : il doit avoir sa Gen cochée
+      // (Si on n'a coché QUE "Formes", les Pokémon de base disparaissent)
+      if (!isParentGenSelected) return false;
     }
 
-    if (!meta) return false;
-
-    // 2. Filtre de sélection des générations
-    const isGenSelected = selectedGens.includes(Number(meta.gen));
-
-    // 3. Recherche (Nom, ID ou Type)
+    // 3. RECHERCHE
     const matchesSearch = 
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
       pIdStr.includes(searchTerm) ||
       (p.types && p.types.some(t => t.toLowerCase().includes(searchTerm.toLowerCase())));
 
-    // 4. Filtre de statut (Capturé / Manquant)
+    // 4. STATUT
     const isCaptured = capturedIds.includes(p.id);
     let matchesStatus = true;
     if (statusFilter === "captured") matchesStatus = isCaptured;
     if (statusFilter === "missing") matchesStatus = !isCaptured;
 
-    return isGenSelected && matchesSearch && matchesStatus;
+    return matchesSearch && matchesStatus;
   })
   .sort((a, b) => {
-    // TRI INTELLIGENT : "0201" puis "0201-f01", "0201-f02", etc.
+    // --- TRI POUR L'ORDRE LOGIQUE ---
     const partsA = String(a.id).split("-");
     const partsB = String(b.id).split("-");
+    
     const numA = parseInt(partsA[0]);
     const numB = parseInt(partsB[0]);
 
-    if (numA !== numB) return numA - numB;
+    // A. Si les numéros de base sont différents, on trie par numéro (ex: 25 avant 26)
+    if (numA !== numB) {
+      return numA - numB;
+    }
 
+    // B. Si c'est le même numéro de base (ex: 201 et 201-f01)
+    // On met celui sans tiret (chaîne vide) en premier
     const variantA = partsA[1] || "";
     const variantB = partsB[1] || "";
+    
     return variantA.localeCompare(variantB);
   });
 

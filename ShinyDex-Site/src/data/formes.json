@@ -655,7 +655,7 @@
     },
     {
         "id": "0449-f1",
-        "name": "Hippopotas Mâle",
+        "name": "Hippopotas Femelle",
         "types": [
             "Sol"
         ],
@@ -663,7 +663,7 @@
     },
     {
         "id": "0450-f1",
-        "name": "Hippodocus Mâle",
+        "name": "Hippodocus Femelle",
         "types": [
             "Sol"
         ],
@@ -725,7 +725,7 @@
     },
     {
         "id": "0521-f1",
-        "name": "Déflaisan Mâle",
+        "name": "Déflaisan Femelle",
         "types": [
             "Normal",
             "Vol"
@@ -856,7 +856,7 @@
     },
     {
         "id": "0592-f1",
-        "name": "Viskuse Mâle",
+        "name": "Viskuse Femelle",
         "types": [
             "Eau",
             "Spectre"
@@ -865,7 +865,7 @@
     },
     {
         "id": "0593-f1",
-        "name": "Moyade Mâle",
+        "name": "Moyade Femelle",
         "types": [
             "Eau",
             "Spectre"
@@ -1063,7 +1063,7 @@
     },
     {
         "id": "0668-f1",
-        "name": "Némélios Mâle",
+        "name": "Némélios Femelle",
         "types": [
             "Feu",
             "Normal"
@@ -1240,7 +1240,7 @@
     },
     {
         "id": "0678-f1",
-        "name": "Mistigrix Mâle",
+        "name": "Mistigrix Femelle",
         "types": [
             "Psy"
         ],
@@ -1275,7 +1275,7 @@
     },
     {
         "id": "0718-f1",
-        "name": "Zygarde Forme 10 %",
+        "name": "Zygarde Forme 50 %",
         "types": [
             "Dragon",
             "Sol"
@@ -1293,7 +1293,7 @@
     },
     {
         "id": "0741-f1",
-        "name": "Plumeline Style Pom-Pom",
+        "name": "Plumeline Style Buyō",
         "types": [
             "Électrik",
             "Vol"
@@ -1302,7 +1302,7 @@
     },
     {
         "id": "0741-f2",
-        "name": "Plumeline Style Hula",
+        "name": "Plumeline Style Flamenco",
         "types": [
             "Psy",
             "Vol"
@@ -1311,7 +1311,7 @@
     },
     {
         "id": "0741-f3",
-        "name": "Plumeline Style Buyō",
+        "name": "Plumeline Style Hula",
         "types": [
             "Spectre",
             "Vol"
@@ -1345,7 +1345,7 @@
     },
     {
         "id": "0849-f1",
-        "name": "Salarsen Forme Grave",
+        "name": "Salarsen Forme Aigüe",
         "types": [
             "Électrik",
             "Poison"
@@ -1418,7 +1418,7 @@
     },
     {
         "id": "0876-f1",
-        "name": "Wimessir Mâle",
+        "name": "Wimessir Femelle",
         "types": [
             "Psy",
             "Normal"
@@ -1454,7 +1454,7 @@
     },
     {
         "id": "0902-f1",
-        "name": "Paragruel Mâle",
+        "name": "Paragruel Femelle",
         "types": [
             "Eau",
             "Spectre"
@@ -1471,7 +1471,7 @@
     },
     {
         "id": "0925-f1",
-        "name": "Famignol Famille de Trois",
+        "name": "Famignol Famille de Quatre",
         "types": [
             "Normal"
         ],
