@@ -2,8 +2,11 @@
 
 - Bargantua Motif Blanc
 - Paragruel Femelle
-
-## Image non présente :
-
 - Couafarel (All Formes)
-- Zygarde (10%)
+
+## Amélioration :
+
+- Icone
+- Version Femelle/Mâle diférentes
+- Séparer la version Mâle/Femelle des formes
+- Erreur Bootstrap
