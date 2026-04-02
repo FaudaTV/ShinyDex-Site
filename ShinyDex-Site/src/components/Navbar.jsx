@@ -6,7 +6,8 @@ const Navbar = ({
   searchTerm, setSearchTerm, 
   statusFilter, setStatusFilter, 
   selectedGens, toggleGen, toggleAllGens,
-  progress, current, total
+  progress, current, total,
+  showFemales, setShowFemales
 }) => {
   return (
     <nav className="navbar navbar-dark bg-dark sticky-top py-3 shadow">
@@ -17,6 +18,21 @@ const Navbar = ({
           <span className="navbar-brand fw-bold fs-3 m-0">✨ SHINYDEX</span>
 
           <div className="d-flex align-items-center gap-2">
+            <div className="form-check form-switch text-white ms-3">
+              <input 
+                className="form-check-input" 
+                type="checkbox" 
+                role="switch" 
+                id="switchFemales"
+                checked={showFemales}
+                onChange={(e) => setShowFemales(e.target.checked)}
+                style={{ cursor: 'pointer' }}
+              />
+              <label className="form-check-label small fw-bold" htmlFor="switchFemales" style={{ cursor: 'pointer' }}>
+                Femelles
+              </label>
+            </div>
+
             {/* DROPDOWN STATUT */}
             <div className="dropdown">
               <button className="btn btn-sm btn-outline-warning dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown">

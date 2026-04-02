@@ -1,0 +1,94 @@
+[
+    {
+        "id": "0003-f",
+        "name": "Florizarre Femelle",
+        "types": ["Plante", "Poison"],
+        "img": "/sprites/shiny/0003-f.gif"
+    },
+    {
+        "id": "0449-f",
+        "name": "Hippopotas Femelle",
+        "types": [
+            "Sol"
+        ],
+        "img": "/sprites/shiny/0449-f.gif"
+    },
+    {
+        "id": "0450-f",
+        "name": "Hippodocus Femelle",
+        "types": [
+            "Sol"
+        ],
+        "img": "/sprites/shiny/0450-f.gif"
+    },
+    {
+        "id": "0521-f",
+        "name": "Déflaisan Femelle",
+        "types": [
+            "Normal",
+            "Vol"
+        ],
+        "img": "/sprites/shiny/0521-f.gif"
+    },
+    {
+        "id": "0592-f",
+        "name": "Viskuse Femelle",
+        "types": [
+            "Eau",
+            "Spectre"
+        ],
+        "img": "/sprites/shiny/0592-f.gif"
+    },
+    {
+        "id": "0593-f",
+        "name": "Moyade Femelle",
+        "types": [
+            "Eau",
+            "Spectre"
+        ],
+        "img": "/sprites/shiny/0593-f.gif"
+    },
+    {
+        "id": "0668-f",
+        "name": "Némélios Femelle",
+        "types": [
+            "Feu",
+            "Normal"
+        ],
+        "img": "/sprites/shiny/0668-f.gif"
+    },
+    {
+        "id": "0678-f",
+        "name": "Mistigrix Femelle",
+        "types": [
+            "Psy"
+        ],
+        "img": "/sprites/shiny/0678-f.gif"
+    },
+    {
+        "id": "0876-f",
+        "name": "Wimessir Femelle",
+        "types": [
+            "Psy",
+            "Normal"
+        ],
+        "img": "/sprites/shiny/0876-f.gif"
+    },
+    {
+        "id": "0902-f",
+        "name": "Paragruel Femelle",
+        "types": [
+            "Eau",
+            "Spectre"
+        ],
+        "img": "/sprites/shiny/0902-f.gif"
+    },
+    {
+        "id": "0916-f",
+        "name": "Fragroin Femelle",
+        "types": [
+            "Normal"
+        ],
+        "img": "/sprites/shiny/0916-f.gif"
+    }
+]

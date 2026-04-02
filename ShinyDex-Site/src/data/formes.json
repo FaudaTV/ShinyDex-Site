@@ -175,7 +175,7 @@
     },
     {
         "id": "0080-f1",
-        "name": "Flagadoss",
+        "name": "Flagadoss Forme de Galar",
         "types": [
             "Poison",
             "Psy"
@@ -344,7 +344,7 @@
     },
     {
         "id": "0201-f01",
-        "name": "Zarbi-B",
+        "name": "Zarbi Forme B",
         "types": [
             "Psy"
         ],
@@ -352,7 +352,7 @@
     },
     {
         "id": "0201-f02",
-        "name": "Zarbi-C",
+        "name": "Zarbi Forme C",
         "types": [
             "Psy"
         ],
@@ -360,7 +360,7 @@
     },
     {
         "id": "0201-f03",
-        "name": "Zarbi-D",
+        "name": "Zarbi Forme D",
         "types": [
             "Psy"
         ],
@@ -368,7 +368,7 @@
     },
     {
         "id": "0201-f04",
-        "name": "Zarbi-E",
+        "name": "Zarbi Forme E",
         "types": [
             "Psy"
         ],
@@ -376,7 +376,7 @@
     },
     {
         "id": "0201-f05",
-        "name": "Zarbi-F",
+        "name": "Zarbi Forme F",
         "types": [
             "Psy"
         ],
@@ -384,7 +384,7 @@
     },
     {
         "id": "0201-f06",
-        "name": "Zarbi-G",
+        "name": "Zarbi Forme G",
         "types": [
             "Psy"
         ],
@@ -392,7 +392,7 @@
     },
     {
         "id": "0201-f07",
-        "name": "Zarbi-H",
+        "name": "Zarbi Forme H",
         "types": [
             "Psy"
         ],
@@ -400,7 +400,7 @@
     },
     {
         "id": "0201-f08",
-        "name": "Zarbi-I",
+        "name": "Zarbi Forme I",
         "types": [
             "Psy"
         ],
@@ -408,7 +408,7 @@
     },
     {
         "id": "0201-f09",
-        "name": "Zarbi-J",
+        "name": "Zarbi Forme J",
         "types": [
             "Psy"
         ],
@@ -416,7 +416,7 @@
     },
     {
         "id": "0201-f10",
-        "name": "Zarbi-K",
+        "name": "Zarbi Forme K",
         "types": [
             "Psy"
         ],
@@ -424,7 +424,7 @@
     },
     {
         "id": "0201-f11",
-        "name": "Zarbi-L",
+        "name": "Zarbi Forme L",
         "types": [
             "Psy"
         ],
@@ -432,7 +432,7 @@
     },
     {
         "id": "0201-f12",
-        "name": "Zarbi-M",
+        "name": "Zarbi Forme M",
         "types": [
             "Psy"
         ],
@@ -440,7 +440,7 @@
     },
     {
         "id": "0201-f13",
-        "name": "Zarbi-N",
+        "name": "Zarbi Forme N",
         "types": [
             "Psy"
         ],
@@ -448,7 +448,7 @@
     },
     {
         "id": "0201-f14",
-        "name": "Zarbi-O",
+        "name": "Zarbi Forme O",
         "types": [
             "Psy"
         ],
@@ -456,7 +456,7 @@
     },
     {
         "id": "0201-f15",
-        "name": "Zarbi-P",
+        "name": "Zarbi Forme P",
         "types": [
             "Psy"
         ],
@@ -464,7 +464,7 @@
     },
     {
         "id": "0201-f16",
-        "name": "Zarbi-Q",
+        "name": "Zarbi Forme Q",
         "types": [
             "Psy"
         ],
@@ -472,7 +472,7 @@
     },
     {
         "id": "0201-f17",
-        "name": "Zarbi-R",
+        "name": "Zarbi Forme R",
         "types": [
             "Psy"
         ],
@@ -480,7 +480,7 @@
     },
     {
         "id": "0201-f18",
-        "name": "Zarbi-S",
+        "name": "Zarbi Forme S",
         "types": [
             "Psy"
         ],
@@ -488,7 +488,7 @@
     },
     {
         "id": "0201-f19",
-        "name": "Zarbi-T",
+        "name": "Zarbi Forme T",
         "types": [
             "Psy"
         ],
@@ -496,7 +496,7 @@
     },
     {
         "id": "0201-f20",
-        "name": "Zarbi-U",
+        "name": "Zarbi Forme U",
         "types": [
             "Psy"
         ],
@@ -504,7 +504,7 @@
     },
     {
         "id": "0201-f21",
-        "name": "Zarbi-V",
+        "name": "Zarbi Forme V",
         "types": [
             "Psy"
         ],
@@ -512,7 +512,7 @@
     },
     {
         "id": "0201-f22",
-        "name": "Zarbi-W",
+        "name": "Zarbi Forme W",
         "types": [
             "Psy"
         ],
@@ -520,7 +520,7 @@
     },
     {
         "id": "0201-f23",
-        "name": "Zarbi-X",
+        "name": "Zarbi Forme X",
         "types": [
             "Psy"
         ],
@@ -528,7 +528,7 @@
     },
     {
         "id": "0201-f24",
-        "name": "Zarbi-Y",
+        "name": "Zarbi Forme Y",
         "types": [
             "Psy"
         ],
@@ -536,7 +536,7 @@
     },
     {
         "id": "0201-f25",
-        "name": "Zarbi-Z",
+        "name": "Zarbi Forme Z",
         "types": [
             "Psy"
         ],
@@ -544,7 +544,7 @@
     },
     {
         "id": "0201-f26",
-        "name": "Zarbi-!",
+        "name": "Zarbi Forme !",
         "types": [
             "Psy"
         ],
@@ -552,7 +552,7 @@
     },
     {
         "id": "0201-f27",
-        "name": "Zarbi-?",
+        "name": "Zarbi Forme ?",
         "types": [
             "Psy"
         ],
@@ -654,22 +654,6 @@
         "img": "/sprites/shiny/0423-f1.gif"
     },
     {
-        "id": "0449-f1",
-        "name": "Hippopotas Femelle",
-        "types": [
-            "Sol"
-        ],
-        "img": "/sprites/shiny/0449-f1.gif"
-    },
-    {
-        "id": "0450-f1",
-        "name": "Hippodocus Femelle",
-        "types": [
-            "Sol"
-        ],
-        "img": "/sprites/shiny/0450-f1.gif"
-    },
-    {
         "id": "0479-f1",
         "name": "Motisma Chaleur",
         "types": [
@@ -722,15 +706,6 @@
             "Ténèbres"
         ],
         "img": "/sprites/shiny/0503-f1.gif"
-    },
-    {
-        "id": "0521-f1",
-        "name": "Déflaisan Femelle",
-        "types": [
-            "Normal",
-            "Vol"
-        ],
-        "img": "/sprites/shiny/0521-f1.gif"
     },
     {
         "id": "0549-f1",
@@ -853,24 +828,6 @@
             "Plante"
         ],
         "img": "/sprites/shiny/0586-f3.gif"
-    },
-    {
-        "id": "0592-f1",
-        "name": "Viskuse Femelle",
-        "types": [
-            "Eau",
-            "Spectre"
-        ],
-        "img": "/sprites/shiny/0592-f1.gif"
-    },
-    {
-        "id": "0593-f1",
-        "name": "Moyade Femelle",
-        "types": [
-            "Eau",
-            "Spectre"
-        ],
-        "img": "/sprites/shiny/0593-f1.gif"
     },
     {
         "id": "0618-f1",
@@ -1062,15 +1019,6 @@
         "img": "/sprites/shiny/0666-f19.gif"
     },
     {
-        "id": "0668-f1",
-        "name": "Némélios Femelle",
-        "types": [
-            "Feu",
-            "Normal"
-        ],
-        "img": "/sprites/shiny/0668-f1.gif"
-    },
-    {
         "id": "0669-f1",
         "name": "Flabébé Fleur Jaune",
         "types": [
@@ -1237,14 +1185,6 @@
             "Normal"
         ],
         "img": "/sprites/shiny/0676-f9.gif"
-    },
-    {
-        "id": "0678-f1",
-        "name": "Mistigrix Femelle",
-        "types": [
-            "Psy"
-        ],
-        "img": "/sprites/shiny/0678-f1.gif"
     },
     {
         "id": "0705-f1",
@@ -1417,15 +1357,6 @@
         "img": "/sprites/shiny/0869-f6.gif"
     },
     {
-        "id": "0876-f1",
-        "name": "Wimessir Femelle",
-        "types": [
-            "Psy",
-            "Normal"
-        ],
-        "img": "/sprites/shiny/0876-f1.gif"
-    },
-    {
         "id": "0892-f1",
         "name": "Shifours Style Mille Poings",
         "types": [
@@ -1451,23 +1382,6 @@
             "Normal"
         ],
         "img": "/sprites/shiny/0901-f1.gif"
-    },
-    {
-        "id": "0902-f1",
-        "name": "Paragruel Femelle",
-        "types": [
-            "Eau",
-            "Spectre"
-        ],
-        "img": "/sprites/shiny/0902-f1.gif"
-    },
-    {
-        "id": "0916-f1",
-        "name": "Fragroin Femelle",
-        "types": [
-            "Normal"
-        ],
-        "img": "/sprites/shiny/0916-f1.gif"
     },
     {
         "id": "0925-f1",

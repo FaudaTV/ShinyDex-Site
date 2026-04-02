@@ -14,8 +14,9 @@ import gen7 from './data/gen7.json';
 import gen8 from './data/gen8.json';
 import gen9 from './data/gen9.json';
 import formsData from './data/formes.json';
+import femalData from './data/femelles.json';
 
-const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9, ...formsData];
+const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9, ...formsData, ...femalData];
 
 function App() {
   // --- ÉTATS ---
@@ -27,6 +28,7 @@ function App() {
   const [selectedGens, setSelectedGens] = useState(gensMetadata.map(m => m.gen));
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
+  const [showFemales, setShowFemales] = useState(false);
 
   // --- MODIF : LIMITE POUR INFINITE SCROLL ---
   const [limit, setLimit] = useState(40); // On commence par afficher 40 Pokémon
@@ -79,8 +81,11 @@ function App() {
   // --- FILTRAGE ---
   const filteredPokemons = allPokemonData.filter(p => {
     const pIdStr = String(p.id);
-    const isForm = pIdStr.includes("-");
     const baseId = parseInt(pIdStr.split("-")[0]);
+    
+    // On identifie si c'est une femelle (ID finit par -f) ou une forme (ID avec un autre tiret)
+    const isFemale = pIdStr.endsWith("-f");
+    const isForm = pIdStr.includes("-") && !isFemale;
 
     // 1. Trouver la génération parente (Gen 1 à 9)
     const metaBase = gensMetadata.find(m => 
@@ -96,26 +101,30 @@ function App() {
     const isFormsEnabled = selectedGens.includes(10);
     const onlyFormsSelected = selectedGens.length === 1 && isFormsEnabled;
 
-    if (isForm) {
-      // On affiche la forme si :
-      // (Sa Gen parente est cochée ET la case Formes est cochée) 
-      // OU (Seule la case Formes est cochée)
+    // --- NOUVELLE LOGIQUE COMBINÉE ---
+    if (isFemale) {
+      // On affiche la femelle SEULEMENT si sa Gen parente est cochée ET que le filtre femelle est ON
+      // (Les femelles ne s'affichent pas si on ne coche QUE "Formes")
+      if (!isParentGenSelected || !showFemales) return false;
+    } 
+    else if (isForm) {
+      // Logique existante pour les formes (Gen 10)
       if (!isFormsEnabled || (!isParentGenSelected && !onlyFormsSelected)) {
         return false;
       }
-    } else {
-      // Pokémon de base : il doit avoir sa Gen cochée
-      // (Si on n'a coché QUE "Formes", les Pokémon de base disparaissent)
+    } 
+    else {
+      // Pokémon de base : doit avoir sa Gen cochée
       if (!isParentGenSelected) return false;
     }
 
-    // 3. RECHERCHE
+    // 3. RECHERCHE (Inchangé)
     const matchesSearch = 
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
       pIdStr.includes(searchTerm) ||
       (p.types && p.types.some(t => t.toLowerCase().includes(searchTerm.toLowerCase())));
 
-    // 4. STATUT
+    // 4. STATUT (Inchangé)
     const isCaptured = capturedIds.includes(p.id);
     let matchesStatus = true;
     if (statusFilter === "captured") matchesStatus = isCaptured;
@@ -124,23 +133,16 @@ function App() {
     return matchesSearch && matchesStatus;
   })
   .sort((a, b) => {
-    // --- TRI POUR L'ORDRE LOGIQUE ---
+    // --- TRI (Inchangé, il placera 0003-f après 0003) ---
     const partsA = String(a.id).split("-");
     const partsB = String(b.id).split("-");
-    
     const numA = parseInt(partsA[0]);
     const numB = parseInt(partsB[0]);
 
-    // A. Si les numéros de base sont différents, on trie par numéro (ex: 25 avant 26)
-    if (numA !== numB) {
-      return numA - numB;
-    }
+    if (numA !== numB) return numA - numB;
 
-    // B. Si c'est le même numéro de base (ex: 201 et 201-f01)
-    // On met celui sans tiret (chaîne vide) en premier
     const variantA = partsA[1] || "";
     const variantB = partsB[1] || "";
-    
     return variantA.localeCompare(variantB);
   });
 
@@ -180,6 +182,8 @@ function App() {
         progress={progress} 
         current={capturesAffichees} 
         total={totalAffiche}
+        showFemales={showFemales}
+        setShowFemales={setShowFemales}
       />
 
       <div className="container mt-4 pb-5">

@@ -8,5 +8,5 @@
   { "gen": 7, "label": "Génération 7", "count": 88, "startId": 722, "endId": 809 },
   { "gen": 8, "label": "Génération 8", "count": 96, "startId": 810, "endId": 905 },
   { "gen": 9, "label": "Génération 9", "count": 120, "startId": 906, "endId": 1025 },
-  { "gen": 10, "label": "Formes", "count": 181}
+  { "gen": 10, "label": "Formes", "count": 171}
 ]

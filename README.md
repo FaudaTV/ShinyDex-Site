@@ -6,7 +6,5 @@
 
 ## Amélioration :
 
-- Icone
-- Version Femelle/Mâle diférentes
-- Séparer la version Mâle/Femelle des formes
-- Erreur Bootstrap
+- Ajouter les versions Femelle/Mâle diférentes
+- Séparer la version Mâle/Femelle des Formes
