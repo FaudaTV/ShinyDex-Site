@@ -3,8 +3,63 @@
 - Bargantua Motif Blanc
 - Paragruel Femelle
 - Couafarel (All Formes)
-
+- Méganium Femelle
+- Coxy Femelle
+- Coxyclaque Femelle
+- Tarpaud Femelle
+- Capumain Femelle
+- Cornèbre Femelle
+- Girafarig Femelle
+- Cizayox Femelle
+- Scarhino Femelle
+- Ursaring Femelle
+- Démolosse Femelle
+- Donphan Femelle
+- Poussifeu Femelle
+- Galifeu Femelle
+- Braségali Femelle
+- Charmillon Femelle
+- Papinox Femelle
+- Méditikka Femelle
+- Charmina Femelle
+- Gloupti Femelle
+- Avaltout Femelle
+- Chamallot Femelle
+- Camérupt Femelle
+- Cacturne Femelle
+- Relicanth Femelle
+- Étourmi Femelle
+- Étourvol Femelle
+- Étouraptor Femelle
+- Keunotor Femelle
+- Castorno Femelle
+- Crikzik Femelle
+- Mélokrik Femelle
+- Lixy Femelle
+- Luxio Femelle
+- Luxray Femelle
+- Pachirisu Femelle
+- Mustébouée Femelle
+- Mustéflott Femelle
+- Capidextre Femelle
+- Griknot Femelle
+- Carmache Femelle
+- Carchacrok Femelle
+- Écayon Femelle
+- Luminéon Femelle
+- Bouldeneu Femelle
+- Rattata Femelle
+- Rattatac Femelle
+- Nosferapti Femelle
+- Nosferalto Femelle
+- Kadabra Femelle
+- Alakazam Femelle
+- Doduo Femelle
+- Dodrio Femelle
+- Hypnomade Femelle
+- Scorplane Femelle
+- Farfuret Forme Hisui Femelle
+ 
 ## Amélioration :
 
-- Ajouter les versions Femelle/Mâle diférentes
-- Séparer la version Mâle/Femelle des Formes
+- Compter la version mâle ou femelle dans le compteur !
