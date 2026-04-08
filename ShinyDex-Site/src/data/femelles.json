@@ -6,7 +6,7 @@
             "Plante",
             "Poison"
         ],
-        "img": "/sprites/shiny/0003-f.gif"
+        "img": "/sprites/shiny/0003-f.png"
     },
     {
         "id": "0012-f",
@@ -15,7 +15,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0012-f.gif"
+        "img": "/sprites/shiny/0012-f.png"
     },
     {
         "id": "0019-f",
@@ -23,7 +23,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0019-f.gif"
+        "img": "/sprites/shiny/0019-f.png"
     },
     {
         "id": "0020-f",
@@ -31,7 +31,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0020-f.gif"
+        "img": "/sprites/shiny/0020-f.png"
     },
     {
         "id": "0025-f",
@@ -39,7 +39,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0025-f.gif"
+        "img": "/sprites/shiny/0025-f.png"
     },
     {
         "id": "0026-f",
@@ -47,7 +47,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0026-f.gif"
+        "img": "/sprites/shiny/0026-f.png"
     },
     {
         "id": "0041-f",
@@ -56,7 +56,7 @@
             "Poison",
             "Vol"
         ],
-        "img": "/sprites/shiny/0041-f.gif"
+        "img": "/sprites/shiny/0041-f.png"
     },
     {
         "id": "0042-f",
@@ -65,7 +65,7 @@
             "Poison",
             "Vol"
         ],
-        "img": "/sprites/shiny/0042-f.gif"
+        "img": "/sprites/shiny/0042-f.png"
     },
     {
         "id": "0044-f",
@@ -74,7 +74,7 @@
             "Plante",
             "Poison"
         ],
-        "img": "/sprites/shiny/0044-f.gif"
+        "img": "/sprites/shiny/0044-f.png"
     },
     {
         "id": "0045-f",
@@ -83,7 +83,7 @@
             "Plante",
             "Poison"
         ],
-        "img": "/sprites/shiny/0045-f.gif"
+        "img": "/sprites/shiny/0045-f.png"
     },
     {
         "id": "0064-f",
@@ -91,7 +91,7 @@
         "types": [
             "Psy"
         ],
-        "img": "/sprites/shiny/0064-f.gif"
+        "img": "/sprites/shiny/0064-f.png"
     },
     {
         "id": "0065-f",
@@ -99,7 +99,7 @@
         "types": [
             "Psy"
         ],
-        "img": "/sprites/shiny/0065-f.gif"
+        "img": "/sprites/shiny/0065-f.png"
     },
     {
         "id": "0084-f",
@@ -108,7 +108,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0084-f.gif"
+        "img": "/sprites/shiny/0084-f.png"
     },
     {
         "id": "0085-f",
@@ -117,7 +117,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0085-f.gif"
+        "img": "/sprites/shiny/0085-f.png"
     },
     {
         "id": "0097-f",
@@ -125,7 +125,7 @@
         "types": [
             "Psy"
         ],
-        "img": "/sprites/shiny/0097-f.gif"
+        "img": "/sprites/shiny/0097-f.png"
     },
     {
         "id": "0111-f",
@@ -134,7 +134,7 @@
             "Sol",
             "Roche"
         ],
-        "img": "/sprites/shiny/0111-f.gif"
+        "img": "/sprites/shiny/0111-f.png"
     },
     {
         "id": "0112-f",
@@ -143,7 +143,7 @@
             "Sol",
             "Roche"
         ],
-        "img": "/sprites/shiny/0112-f.gif"
+        "img": "/sprites/shiny/0112-f.png"
     },
     {
         "id": "0118-f",
@@ -151,7 +151,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0118-f.gif"
+        "img": "/sprites/shiny/0118-f.png"
     },
     {
         "id": "0119-f",
@@ -159,7 +159,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0119-f.gif"
+        "img": "/sprites/shiny/0119-f.png"
     },
     {
         "id": "0123-f",
@@ -168,7 +168,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0123-f.gif"
+        "img": "/sprites/shiny/0123-f.png"
     },
     {
         "id": "0129-f",
@@ -176,7 +176,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0129-f.gif"
+        "img": "/sprites/shiny/0129-f.png"
     },
     {
         "id": "0130-f",
@@ -185,7 +185,7 @@
             "Eau",
             "Vol"
         ],
-        "img": "/sprites/shiny/0130-f.gif"
+        "img": "/sprites/shiny/0130-f.png"
     },
     {
         "id": "0133-f",
@@ -193,7 +193,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0133-f.gif"
+        "img": "/sprites/shiny/0133-f.png"
     },
     {
         "id": "0154-f",
@@ -201,7 +201,7 @@
         "types": [
             "Plante"
         ],
-        "img": "/sprites/shiny/0154-f.gif"
+        "img": "/sprites/shiny/0154-f.png"
     },
     {
         "id": "0165-f",
@@ -210,7 +210,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0165-f.gif"
+        "img": "/sprites/shiny/0165-f.png"
     },
     {
         "id": "0166-f",
@@ -219,7 +219,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0166-f.gif"
+        "img": "/sprites/shiny/0166-f.png"
     },
     {
         "id": "0178-f",
@@ -228,7 +228,7 @@
             "Psy",
             "Vol"
         ],
-        "img": "/sprites/shiny/0178-f.gif"
+        "img": "/sprites/shiny/0178-f.png"
     },
     {
         "id": "0185-f",
@@ -236,7 +236,7 @@
         "types": [
             "Roche"
         ],
-        "img": "/sprites/shiny/0185-f.gif"
+        "img": "/sprites/shiny/0185-f.png"
     },
     {
         "id": "0186-f",
@@ -244,7 +244,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0186-f.gif"
+        "img": "/sprites/shiny/0186-f.png"
     },
     {
         "id": "0190-f",
@@ -252,7 +252,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0190-f.gif"
+        "img": "/sprites/shiny/0190-f.png"
     },
     {
         "id": "0194-f",
@@ -261,7 +261,7 @@
             "Eau",
             "Sol"
         ],
-        "img": "/sprites/shiny/0194-f.gif"
+        "img": "/sprites/shiny/0194-f.png"
     },
     {
         "id": "0195-f",
@@ -270,7 +270,7 @@
             "Eau",
             "Sol"
         ],
-        "img": "/sprites/shiny/0195-f.gif"
+        "img": "/sprites/shiny/0195-f.png"
     },
     {
         "id": "0198-f",
@@ -279,7 +279,7 @@
             "Ténèbres",
             "Vol"
         ],
-        "img": "/sprites/shiny/0198-f.gif"
+        "img": "/sprites/shiny/0198-f.png"
     },
     {
         "id": "0202-f",
@@ -287,7 +287,7 @@
         "types": [
             "Psy"
         ],
-        "img": "/sprites/shiny/0202-f.gif"
+        "img": "/sprites/shiny/0202-f.png"
     },
     {
         "id": "0203-f",
@@ -296,7 +296,7 @@
             "Normal",
             "Psy"
         ],
-        "img": "/sprites/shiny/0203-f.gif"
+        "img": "/sprites/shiny/0203-f.png"
     },
     {
         "id": "0207-f",
@@ -305,7 +305,7 @@
             "Sol",
             "Vol"
         ],
-        "img": "/sprites/shiny/0207-f.gif"
+        "img": "/sprites/shiny/0207-f.png"
     },
     {
         "id": "0208-f",
@@ -314,7 +314,7 @@
             "Acier",
             "Sol"
         ],
-        "img": "/sprites/shiny/0208-f.gif"
+        "img": "/sprites/shiny/0208-f.png"
     },
     {
         "id": "0212-f",
@@ -323,7 +323,7 @@
             "Insecte",
             "Acier"
         ],
-        "img": "/sprites/shiny/0212-f.gif"
+        "img": "/sprites/shiny/0212-f.png"
     },
     {
         "id": "0214-f",
@@ -332,7 +332,7 @@
             "Insecte",
             "Combat"
         ],
-        "img": "/sprites/shiny/0214-f.gif"
+        "img": "/sprites/shiny/0214-f.png"
     },
     {
         "id": "0215-f",
@@ -341,7 +341,7 @@
             "Ténèbres",
             "Glace"
         ],
-        "img": "/sprites/shiny/0215-f.gif"
+        "img": "/sprites/shiny/0215-f.png"
     },
     {
         "id": "0215-f1-f",
@@ -350,7 +350,7 @@
             "Combat",
             "Poison"
         ],
-        "img": "/sprites/shiny/0215-f1-f.gif"
+        "img": "/sprites/shiny/0215-f1-f.png"
     },
     {
         "id": "0217-f",
@@ -358,7 +358,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0217-f.gif"
+        "img": "/sprites/shiny/0217-f.png"
     },
     {
         "id": "0221-f",
@@ -367,7 +367,7 @@
             "Glace",
             "Sol"
         ],
-        "img": "/sprites/shiny/0221-f.gif"
+        "img": "/sprites/shiny/0221-f.png"
     },
     {
         "id": "0224-f",
@@ -375,7 +375,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0224-f.gif"
+        "img": "/sprites/shiny/0224-f.png"
     },
     {
         "id": "0229-f",
@@ -384,7 +384,7 @@
             "Ténèbres",
             "Feu"
         ],
-        "img": "/sprites/shiny/0229-f.gif"
+        "img": "/sprites/shiny/0229-f.png"
     },
     {
         "id": "0232-f",
@@ -392,7 +392,7 @@
         "types": [
             "Sol"
         ],
-        "img": "/sprites/shiny/0232-f.gif"
+        "img": "/sprites/shiny/0232-f.png"
     },
     {
         "id": "0255-f",
@@ -400,7 +400,7 @@
         "types": [
             "Feu"
         ],
-        "img": "/sprites/shiny/0255-f.gif"
+        "img": "/sprites/shiny/0255-f.png"
     },
     {
         "id": "0256-f",
@@ -408,7 +408,7 @@
         "types": [
             "Feu"
         ],
-        "img": "/sprites/shiny/0256-f.gif"
+        "img": "/sprites/shiny/0256-f.png"
     },
     {
         "id": "0257-f",
@@ -417,7 +417,7 @@
             "Feu",
             "Combat"
         ],
-        "img": "/sprites/shiny/0257-f.gif"
+        "img": "/sprites/shiny/0257-f.png"
     },
     {
         "id": "0267-f",
@@ -426,7 +426,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0267-f.gif"
+        "img": "/sprites/shiny/0267-f.png"
     },
     {
         "id": "0269-f",
@@ -435,7 +435,7 @@
             "Insecte",
             "Poison"
         ],
-        "img": "/sprites/shiny/0269-f.gif"
+        "img": "/sprites/shiny/0269-f.png"
     },
     {
         "id": "0272-f",
@@ -444,7 +444,7 @@
             "Eau",
             "Plante"
         ],
-        "img": "/sprites/shiny/0272-f.gif"
+        "img": "/sprites/shiny/0272-f.png"
     },
     {
         "id": "0274-f",
@@ -453,7 +453,7 @@
             "Plante",
             "Ténèbres"
         ],
-        "img": "/sprites/shiny/0274-f.gif"
+        "img": "/sprites/shiny/0274-f.png"
     },
     {
         "id": "0275-f",
@@ -462,7 +462,7 @@
             "Plante",
             "Ténèbres"
         ],
-        "img": "/sprites/shiny/0275-f.gif"
+        "img": "/sprites/shiny/0275-f.png"
     },
     {
         "id": "0307-f",
@@ -471,7 +471,7 @@
             "Combat",
             "Psy"
         ],
-        "img": "/sprites/shiny/0307-f.gif"
+        "img": "/sprites/shiny/0307-f.png"
     },
     {
         "id": "0308-f",
@@ -480,7 +480,7 @@
             "Combat",
             "Psy"
         ],
-        "img": "/sprites/shiny/0308-f.gif"
+        "img": "/sprites/shiny/0308-f.png"
     },
     {
         "id": "0315-f",
@@ -489,7 +489,7 @@
             "Plante",
             "Poison"
         ],
-        "img": "/sprites/shiny/0315-f.gif"
+        "img": "/sprites/shiny/0315-f.png"
     },
     {
         "id": "0316-f",
@@ -497,7 +497,7 @@
         "types": [
             "Poison"
         ],
-        "img": "/sprites/shiny/0316-f.gif"
+        "img": "/sprites/shiny/0316-f.png"
     },
     {
         "id": "0317-f",
@@ -505,7 +505,7 @@
         "types": [
             "Poison"
         ],
-        "img": "/sprites/shiny/0317-f.gif"
+        "img": "/sprites/shiny/0317-f.png"
     },
     {
         "id": "0322-f",
@@ -514,7 +514,7 @@
             "Feu",
             "Sol"
         ],
-        "img": "/sprites/shiny/0322-f.gif"
+        "img": "/sprites/shiny/0322-f.png"
     },
     {
         "id": "0323-f",
@@ -523,7 +523,7 @@
             "Feu",
             "Sol"
         ],
-        "img": "/sprites/shiny/0323-f.gif"
+        "img": "/sprites/shiny/0323-f.png"
     },
     {
         "id": "0332-f",
@@ -532,7 +532,7 @@
             "Plante",
             "Ténèbres"
         ],
-        "img": "/sprites/shiny/0332-f.gif"
+        "img": "/sprites/shiny/0332-f.png"
     },
     {
         "id": "0350-f",
@@ -540,7 +540,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0350-f.gif"
+        "img": "/sprites/shiny/0350-f.png"
     },
     {
         "id": "0369-f",
@@ -549,7 +549,7 @@
             "Eau",
             "Roche"
         ],
-        "img": "/sprites/shiny/0369-f.gif"
+        "img": "/sprites/shiny/0369-f.png"
     },
     {
         "id": "0396-f",
@@ -558,7 +558,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0396-f.gif"
+        "img": "/sprites/shiny/0396-f.png"
     },
     {
         "id": "0397-f",
@@ -567,7 +567,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0397-f.gif"
+        "img": "/sprites/shiny/0397-f.png"
     },
     {
         "id": "0398-f",
@@ -576,7 +576,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0398-f.gif"
+        "img": "/sprites/shiny/0398-f.png"
     },
     {
         "id": "0399-f",
@@ -584,7 +584,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0399-f.gif"
+        "img": "/sprites/shiny/0399-f.png"
     },
     {
         "id": "0400-f",
@@ -593,7 +593,7 @@
             "Normal",
             "Eau"
         ],
-        "img": "/sprites/shiny/0400-f.gif"
+        "img": "/sprites/shiny/0400-f.png"
     },
     {
         "id": "0401-f",
@@ -601,7 +601,7 @@
         "types": [
             "Insecte"
         ],
-        "img": "/sprites/shiny/0401-f.gif"
+        "img": "/sprites/shiny/0401-f.png"
     },
     {
         "id": "0402-f",
@@ -609,7 +609,7 @@
         "types": [
             "Insecte"
         ],
-        "img": "/sprites/shiny/0402-f.gif"
+        "img": "/sprites/shiny/0402-f.png"
     },
     {
         "id": "0403-f",
@@ -617,7 +617,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0403-f.gif"
+        "img": "/sprites/shiny/0403-f.png"
     },
     {
         "id": "0404-f",
@@ -625,7 +625,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0404-f.gif"
+        "img": "/sprites/shiny/0404-f.png"
     },
     {
         "id": "0405-f",
@@ -633,7 +633,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0405-f.gif"
+        "img": "/sprites/shiny/0405-f.png"
     },
     {
         "id": "0407-f",
@@ -642,7 +642,7 @@
             "Plante",
             "Poison"
         ],
-        "img": "/sprites/shiny/0407-f.gif"
+        "img": "/sprites/shiny/0407-f.png"
     },
     {
         "id": "0415-f",
@@ -651,7 +651,7 @@
             "Insecte",
             "Vol"
         ],
-        "img": "/sprites/shiny/0415-f.gif"
+        "img": "/sprites/shiny/0415-f.png"
     },
     {
         "id": "0417-f",
@@ -659,7 +659,7 @@
         "types": [
             "Électrik"
         ],
-        "img": "/sprites/shiny/0417-f.gif"
+        "img": "/sprites/shiny/0417-f.png"
     },
     {
         "id": "0418-f",
@@ -667,7 +667,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0418-f.gif"
+        "img": "/sprites/shiny/0418-f.png"
     },
     {
         "id": "0419-f",
@@ -675,7 +675,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0419-f.gif"
+        "img": "/sprites/shiny/0419-f.png"
     },
     {
         "id": "0424-f",
@@ -683,7 +683,7 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0424-f.gif"
+        "img": "/sprites/shiny/0424-f.png"
     },
     {
         "id": "0443-f",
@@ -692,7 +692,7 @@
             "Dragon",
             "Sol"
         ],
-        "img": "/sprites/shiny/0443-f.gif"
+        "img": "/sprites/shiny/0443-f.png"
     },
     {
         "id": "0444-f",
@@ -701,7 +701,7 @@
             "Dragon",
             "Sol"
         ],
-        "img": "/sprites/shiny/0444-f.gif"
+        "img": "/sprites/shiny/0444-f.png"
     },
     {
         "id": "0445-f",
@@ -710,7 +710,7 @@
             "Dragon",
             "Sol"
         ],
-        "img": "/sprites/shiny/0445-f.gif"
+        "img": "/sprites/shiny/0445-f.png"
     },
     {
         "id": "0449-f",
@@ -718,7 +718,7 @@
         "types": [
             "Sol"
         ],
-        "img": "/sprites/shiny/0449-f.gif"
+        "img": "/sprites/shiny/0449-f.png"
     },
     {
         "id": "0450-f",
@@ -726,7 +726,7 @@
         "types": [
             "Sol"
         ],
-        "img": "/sprites/shiny/0450-f.gif"
+        "img": "/sprites/shiny/0450-f.png"
     },
     {
         "id": "0453-f",
@@ -735,7 +735,7 @@
             "Poison",
             "Combat"
         ],
-        "img": "/sprites/shiny/0453-f.gif"
+        "img": "/sprites/shiny/0453-f.png"
     },
     {
         "id": "0454-f",
@@ -744,7 +744,7 @@
             "Poison",
             "Combat"
         ],
-        "img": "/sprites/shiny/0454-f.gif"
+        "img": "/sprites/shiny/0454-f.png"
     },
     {
         "id": "0456-f",
@@ -752,7 +752,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0456-f.gif"
+        "img": "/sprites/shiny/0456-f.png"
     },
     {
         "id": "0457-f",
@@ -760,7 +760,7 @@
         "types": [
             "Eau"
         ],
-        "img": "/sprites/shiny/0457-f.gif"
+        "img": "/sprites/shiny/0457-f.png"
     },
     {
         "id": "0459-f",
@@ -769,7 +769,7 @@
             "Plante",
             "Glace"
         ],
-        "img": "/sprites/shiny/0459-f.gif"
+        "img": "/sprites/shiny/0459-f.png"
     },
     {
         "id": "0460-f",
@@ -778,7 +778,7 @@
             "Plante",
             "Glace"
         ],
-        "img": "/sprites/shiny/0460-f.gif"
+        "img": "/sprites/shiny/0460-f.png"
     },
     {
         "id": "0461-f",
@@ -787,7 +787,7 @@
             "Ténèbres",
             "Glace"
         ],
-        "img": "/sprites/shiny/0461-f.gif"
+        "img": "/sprites/shiny/0461-f.png"
     },
     {
         "id": "0464-f",
@@ -796,7 +796,7 @@
             "Sol",
             "Roche"
         ],
-        "img": "/sprites/shiny/0464-f.gif"
+        "img": "/sprites/shiny/0464-f.png"
     },
     {
         "id": "0465-f",
@@ -804,7 +804,7 @@
         "types": [
             "Plante"
         ],
-        "img": "/sprites/shiny/0465-f.gif"
+        "img": "/sprites/shiny/0465-f.png"
     },
     {
         "id": "0473-f",
@@ -813,7 +813,7 @@
             "Glace",
             "Sol"
         ],
-        "img": "/sprites/shiny/0473-f.gif"
+        "img": "/sprites/shiny/0473-f.png"
     },
     {
         "id": "0521-f",
@@ -822,7 +822,7 @@
             "Normal",
             "Vol"
         ],
-        "img": "/sprites/shiny/0521-f.gif"
+        "img": "/sprites/shiny/0521-f.png"
     },
     {
         "id": "0592-f",
@@ -831,7 +831,7 @@
             "Eau",
             "Spectre"
         ],
-        "img": "/sprites/shiny/0592-f.gif"
+        "img": "/sprites/shiny/0592-f.png"
     },
     {
         "id": "0593-f",
@@ -840,7 +840,7 @@
             "Eau",
             "Spectre"
         ],
-        "img": "/sprites/shiny/0593-f.gif"
+        "img": "/sprites/shiny/0593-f.png"
     },
     {
         "id": "0668-f",
@@ -849,7 +849,7 @@
             "Feu",
             "Normal"
         ],
-        "img": "/sprites/shiny/0668-f.gif"
+        "img": "/sprites/shiny/0668-f.png"
     },
     {
         "id": "0678-f",
@@ -857,7 +857,7 @@
         "types": [
             "Psy"
         ],
-        "img": "/sprites/shiny/0678-f.gif"
+        "img": "/sprites/shiny/0678-f.png"
     },
     {
         "id": "0876-f",
@@ -866,7 +866,7 @@
             "Psy",
             "Normal"
         ],
-        "img": "/sprites/shiny/0876-f.gif"
+        "img": "/sprites/shiny/0876-f.png"
     },
     {
         "id": "0902-f",
@@ -875,7 +875,7 @@
             "Eau",
             "Spectre"
         ],
-        "img": "/sprites/shiny/0902-f.gif"
+        "img": "/sprites/shiny/0902-f.png"
     },
     {
         "id": "0916-f",
@@ -883,6 +883,6 @@
         "types": [
             "Normal"
         ],
-        "img": "/sprites/shiny/0916-f.gif"
+        "img": "/sprites/shiny/0916-f.png"
     }
 ]

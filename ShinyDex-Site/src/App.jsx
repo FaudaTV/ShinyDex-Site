@@ -28,7 +28,7 @@ function App() {
   const [selectedGens, setSelectedGens] = useState(gensMetadata.map(m => m.gen));
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
-  const [showFemales, setShowFemales] = useState(false);
+  const [showFemales, setShowFemales] = useState(true);
 
   // --- MODIF : LIMITE POUR INFINITE SCROLL ---
   const [limit, setLimit] = useState(40); // On commence par afficher 40 Pokémon
@@ -151,21 +151,54 @@ function App() {
 
   // --- STATS ---
   
-  // Total des Pokémon de base uniquement (Gen 1 à 9)
-  const totalAffiche = gensMetadata
-    .filter(m => selectedGens.includes(m.gen) && m.gen !== 10)
-    .reduce((acc, c) => acc + c.count, 0);
+  // 1. On vérifie si on est en mode "Unique" (seulement Formes ou seulement Femelles)
+  const isOnlyForms = selectedGens.length === 1 && selectedGens.includes(10);
+  const isOnlyFemales = selectedGens.length === 0 && showFemales; // Si aucune gen mais femelles ON
 
-  // Nombre de captures parmi les Pokémon de base uniquement
-  const capturesAffichees = capturedIds.filter(id => {
-    const idStr = String(id);
-    if (idStr.includes("-")) return false; // On ne compte pas les formes dans la progression
+  // 2. Calcul du Total Dynamique
+  let totalAffiche = 0;
+  if (isOnlyForms) {
+    // Mode défi Formes : on prend le count de la Gen 10
+    totalAffiche = gensMetadata.find(m => m.gen === 10)?.count || 0;
+  } else {
+    // Mode normal : on prend le count des générations 1 à 9 sélectionnées
+    totalAffiche = gensMetadata
+      .filter(m => selectedGens.includes(Number(m.gen)) && m.gen !== 10)
+      .reduce((acc, c) => acc + c.count, 0);
+  }
 
-    const numId = parseInt(idStr);
-    return gensMetadata.some(m => 
-      selectedGens.includes(m.gen) && m.gen !== 10 && numId >= m.startId && numId <= m.endId
-    );
-  }).length;
+  // 3. Calcul des Captures
+  const capturesAffichees = gensMetadata
+    .filter(m => {
+      if (isOnlyForms) return m.gen === 10; // On ne regarde que la gen 10
+      return selectedGens.includes(Number(m.gen)) && m.gen !== 10;
+    })
+    .reduce((totalGen, gen) => {
+      let completedInGen = 0;
+
+      if (gen.gen === 10) {
+        // SI MODE FORMES : On compte simplement chaque ID de forme capturé
+        completedInGen = capturedIds.filter(id => {
+          const idStr = String(id);
+          return idStr.includes("-") && !idStr.endsWith("-f");
+        }).length;
+      } else {
+        // SI MODE NORMAL : Logique Mâle OU Femelle OU Forme (compte pour 1 espèce)
+        for (let id = gen.startId; id <= gen.endId; id++) {
+          const baseIdInt = id;
+          const baseIdStr = String(id).padStart(4, '0');
+
+          const isSpeciesCaptured = capturedIds.some(capturedId => {
+            const cIdStr = String(capturedId);
+            const capturedBasePart = cIdStr.split("-")[0];
+            return capturedId === baseIdInt || capturedBasePart === baseIdStr;
+          });
+
+          if (isSpeciesCaptured) completedInGen++;
+        }
+      }
+      return totalGen + completedInGen;
+    }, 0);
 
   const progress = totalAffiche > 0 ? (capturesAffichees / totalAffiche) * 100 : 0;
 
