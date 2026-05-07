@@ -14,9 +14,26 @@ import gen7 from './data/gen7.json';
 import gen8 from './data/gen8.json';
 import gen9 from './data/gen9.json';
 import formsData from './data/formes.json';
-import femalData from './data/femelles.json';
 
-const allPokemonData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9, ...formsData, ...femalData];
+const baseData = [...gen1, ...gen2, ...gen3, ...gen4, ...gen5, ...gen6, ...gen7, ...gen8, ...gen9, ...formsData];
+
+// On génère dynamiquement les entrées femelles
+const allPokemonData = [];
+
+baseData.forEach(p => {
+  allPokemonData.push(p); 
+  
+  if (p.hasFemale) {
+    const padId = String(p.id).padStart(4, '0');
+    allPokemonData.push({
+      ...p,
+      id: `${padId}-f`,
+      // On garde l'ID femelle, mais on ajoute un flag pour le composant
+      isFemaleVariant: true,
+      femaleImg: `/sprites/shiny/${padId}-f.png` 
+    });
+  }
+});
 
 function App() {
   // --- ÉTATS ---
@@ -83,11 +100,11 @@ function App() {
     const pIdStr = String(p.id);
     const baseId = parseInt(pIdStr.split("-")[0]);
     
-    // On identifie si c'est une femelle (ID finit par -f) ou une forme (ID avec un autre tiret)
-    const isFemale = pIdStr.endsWith("-f");
+    // 1. Identification
+    const isFemale = p.isFemaleVariant;
     const isForm = pIdStr.includes("-") && !isFemale;
 
-    // 1. Trouver la génération parente (Gen 1 à 9)
+    // 2. Trouver la génération parente
     const metaBase = gensMetadata.find(m => 
       baseId >= m.startId && 
       baseId <= m.endId && 
@@ -96,35 +113,39 @@ function App() {
 
     if (!metaBase) return false;
 
-    // 2. LOGIQUE DE SÉLECTION
     const isParentGenSelected = selectedGens.includes(Number(metaBase.gen));
     const isFormsEnabled = selectedGens.includes(10);
     const onlyFormsSelected = selectedGens.length === 1 && isFormsEnabled;
 
-    // --- NOUVELLE LOGIQUE COMBINÉE ---
+    // --- LOGIQUE DE SÉLECTION CORRIGÉE ---
     if (isFemale) {
-      // On affiche la femelle SEULEMENT si sa Gen parente est cochée ET que le filtre femelle est ON
-      // (Les femelles ne s'affichent pas si on ne coche QUE "Formes")
-      if (!isParentGenSelected || !showFemales) return false;
-    } 
-    else if (isForm) {
-      // Logique existante pour les formes (Gen 10)
-      if (!isFormsEnabled || (!isParentGenSelected && !onlyFormsSelected)) {
-        return false;
+      if (!showFemales) return false;
+      
+      // On détecte si c'est une femelle d'une forme (ID contient déjà un tiret avant le -f final)
+      // Ou si l'objet provient de formsData (on peut checker une propriété si tu en as une)
+      const isFromForm = pIdStr.split('-').length > 2 || (pIdStr.includes('-') && !pIdStr.endsWith('-f'));
+      
+      if (isFromForm) {
+        // Femelle d'une forme (ex: Rattata Alola ♀)
+        if (!isFormsEnabled) return false;
+      } else {
+        // Femelle de base (ex: Florizarre ♀)
+        if (!isParentGenSelected) return false;
       }
     } 
+    else if (isForm) {
+      if (!isFormsEnabled || (!isParentGenSelected && !onlyFormsSelected)) return false;
+    } 
     else {
-      // Pokémon de base : doit avoir sa Gen cochée
       if (!isParentGenSelected) return false;
     }
 
-    // 3. RECHERCHE (Inchangé)
+    // 3. RECHERCHE & STATUT
     const matchesSearch = 
       p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
       pIdStr.includes(searchTerm) ||
       (p.types && p.types.some(t => t.toLowerCase().includes(searchTerm.toLowerCase())));
 
-    // 4. STATUT (Inchangé)
     const isCaptured = capturedIds.includes(p.id);
     let matchesStatus = true;
     if (statusFilter === "captured") matchesStatus = isCaptured;
@@ -133,7 +154,6 @@ function App() {
     return matchesSearch && matchesStatus;
   })
   .sort((a, b) => {
-    // --- TRI (Inchangé, il placera 0003-f après 0003) ---
     const partsA = String(a.id).split("-");
     const partsB = String(b.id).split("-");
     const numA = parseInt(partsA[0]);
@@ -141,49 +161,58 @@ function App() {
 
     if (numA !== numB) return numA - numB;
 
-    const variantA = partsA[1] || "";
-    const variantB = partsB[1] || "";
-    return variantA.localeCompare(variantB);
+    // Tri par longueur de chaîne pour que 0019-f1 passe avant 0019-f1-f
+    const vA = partsA.slice(1).join("-");
+    const vB = partsB.slice(1).join("-");
+    
+    return vA.localeCompare(vB, undefined, { numeric: true, sensitivity: 'base' });
   });
 
   // --- MODIF : DÉCOUPE DU TABLEAU POUR L'AFFICHAGE ---
   const displayedPokemons = filteredPokemons.slice(0, limit);
 
   // --- STATS ---
-  
-  // 1. On vérifie si on est en mode "Unique" (seulement Formes ou seulement Femelles)
-  const isOnlyForms = selectedGens.length === 1 && selectedGens.includes(10);
-  const isOnlyFemales = selectedGens.length === 0 && showFemales; // Si aucune gen mais femelles ON
 
-  // 2. Calcul du Total Dynamique
-  let totalAffiche = 0;
-  if (isOnlyForms) {
-    // Mode défi Formes : on prend le count de la Gen 10
-    totalAffiche = gensMetadata.find(m => m.gen === 10)?.count || 0;
-  } else {
-    // Mode normal : on prend le count des générations 1 à 9 sélectionnées
-    totalAffiche = gensMetadata
-      .filter(m => selectedGens.includes(Number(m.gen)) && m.gen !== 10)
-      .reduce((acc, c) => acc + c.count, 0);
-  }
+  // 1. Déterminer si on est en mode "Défi Formes" (Uniquement la Gen 10 cochée)
+  const isOnlyForms = selectedGens.length === 1 && selectedGens.includes(10);
+
+  // 2. Calcul du Total
+  const totalAffiche = gensMetadata
+    .filter(m => {
+      if (isOnlyForms) return m.gen === 10; // Si QUE formes, total = nb de formes (ex: 181)
+      return selectedGens.includes(Number(m.gen)) && m.gen !== 10; // Sinon total = 1025 (ou par gen)
+    })
+    .reduce((acc, c) => acc + c.count, 0);
 
   // 3. Calcul des Captures
   const capturesAffichees = gensMetadata
     .filter(m => {
-      if (isOnlyForms) return m.gen === 10; // On ne regarde que la gen 10
+      if (isOnlyForms) return m.gen === 10;
       return selectedGens.includes(Number(m.gen)) && m.gen !== 10;
     })
     .reduce((totalGen, gen) => {
       let completedInGen = 0;
 
       if (gen.gen === 10) {
-        // SI MODE FORMES : On compte simplement chaque ID de forme capturé
-        completedInGen = capturedIds.filter(id => {
-          const idStr = String(id);
-          return idStr.includes("-") && !idStr.endsWith("-f");
-        }).length;
+        // --- MODE FORMES ---
+        // On veut que "Rattata Alola Mâle" et "Rattata Alola Femelle" comptent pour 1
+        // On récupère toutes les formes de base (celles qui ne sont pas des variantes femelles)
+        const distinctForms = formsData.filter(f => !f.isFemaleVariant);
+        
+        distinctForms.forEach(form => {
+          const formIdStr = String(form.id); // ex: "0019-f1"
+          
+          // On considère la forme capturée si on a l'ID exact OU l'ID avec le suffixe femelle
+          const isCaptured = capturedIds.some(cId => {
+            const cIdStr = String(cId);
+            return cIdStr === formIdStr || cIdStr === `${formIdStr}-f`;
+          });
+          
+          if (isCaptured) completedInGen++;
+        });
       } else {
-        // SI MODE NORMAL : Logique Mâle OU Femelle OU Forme (compte pour 1 espèce)
+        // --- MODE NORMAL (Gens 1-9) ---
+        // 1 espèce = 1 point (Mâle OU Femelle OU n'importe quelle Forme)
         for (let id = gen.startId; id <= gen.endId; id++) {
           const baseIdInt = id;
           const baseIdStr = String(id).padStart(4, '0');

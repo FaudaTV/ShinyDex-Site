@@ -1,5 +1,4 @@
 ## Amélioration :
 
-- Ajouter Amphinobie Sasha (Pikachu ?)
-- Rajouter les femelles meme si forme identique au male
-- Ajouter le nom des formes dans les Pokemon Base (Mâle aussi)
+- Ajouter option Jeux + pokeball ?
+- Ajouter les formes logiques dans le filtre forme (couleur, style etc... (flabebe, plumeline, etc...))
