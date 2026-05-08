@@ -1606,6 +1606,14 @@
         "hasFemale": true
     },
     {
+        "id": "0999-f1",
+        "name": "Mordudor Forme Marche",
+        "types": [
+        "Spectre"
+        ],
+        "img": "/sprites/shiny/0999-f1.png"
+    },
+    {
         "id": "1012-f1",
         "name": "Poltchageist Forme Onéreuse",
         "types": [
